@@ -40,6 +40,9 @@
 
       // soon add click hanlder to body to close this element
       // will need custom handler inside here
+      if(options.auto_show){
+        this.clickery()
+      }
     }
     , clickery: function(e) {
       // clickery isn't only run by event handlers can be called by timeout or manually
@@ -47,7 +50,7 @@
       // need to stop progration or body click handler would fire right away
       if (e) {
         e.preventDefault();
-        // e.stopPropagation();
+        e.stopPropagation();
       }
 
       // set popover's dim's
