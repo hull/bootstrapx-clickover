@@ -115,6 +115,19 @@
     , isShown: function() {
       return this.tip().hasClass('in');
     }
+    , setContent: function () {
+      var $tip = this.tip()
+        , title = this.getTitle()
+        , content = this.getContent()
+
+      $tip.find('.popover-title')[this.isHTML(title) ? 'html' : 'text'](title)
+      if (typeof(content)==="object") {
+        $tip.find('.popover-content').empty().append(content)
+      } else {
+        $tip.find('.popover-content > *')[this.isHTML(content) ? 'html' : 'text'](content)   
+      }
+      $tip.removeClass('fade top bottom left right in')
+    }
     , debughide: function() {
       var dt = new Date().toString();
 
