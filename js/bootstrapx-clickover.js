@@ -20,7 +20,7 @@
     this.cinit('clickover', element, options );
   }
 
-  Clickover.prototype = $.extend({}, $.fn.popover.Constructor.prototype, {
+  Clickover.prototype = $.extend({}, $.fn.popover.constructor.prototype, {
 
     constructor: Clickover
 
@@ -205,7 +205,7 @@
     })
   }
 
-  $.fn.clickover.Constructor = Clickover
+  $.fn.clickover.constructor = Clickover
 
   // these defaults are passed directly to parent classes
   $.fn.clickover.defaults = $.extend({}, $.fn.popover.defaults, {
