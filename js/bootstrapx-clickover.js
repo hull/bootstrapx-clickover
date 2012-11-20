@@ -47,7 +47,7 @@
       // need to stop progration or body click handler would fire right away
       if (e) {
         e.preventDefault();
-        e.stopPropagation();
+        // e.stopPropagation();
       }
 
       // set popover's dim's
@@ -109,7 +109,7 @@
 
 		// provide some callback hooks
         typeof this.options.onHidden == 'function' && this.options.onHidden.call(this);
-        this.$element.trigger('hidden');
+        // this.$element.trigger('hidden');
       }
     }
     , isShown: function() {
